@@ -35,7 +35,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
     JMenuItem tm = new JMenuItem("紬");
     JMenuItem um = new JMenuItem("羽未");
 
-    private final int MODE = 1;  // 代表移动模式，1表示移动拼图块，0表示移动空白块
+    private final int MODE = 0;  // 代表移动模式，1表示移动拼图块，0表示移动空白块
 
     private String imageChoice = "tm/tm01";  // 拼图图片选择
 
@@ -361,7 +361,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             jd.setModal(true);  // 弹框不关闭则无法操作界面
             jd.setVisible(true);
         } else if (obj == helpItem) {
-            File helpDoc = new File("docs/help.html");
+            File helpDoc = new File("./docs/help.html");
             Desktop desktop = Desktop.getDesktop();
             try {
                 desktop.browse(helpDoc.toURI());
@@ -386,7 +386,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             restart();
         }else if (obj == tm) {
             Random r = new Random();
-            imageChoice = "tm/tm0" + (r.nextInt(7) + 1);
+            imageChoice = "tm/tm0" + (r.nextInt(6) + 1);
             restart();
         }else if (obj == um) {
             Random r = new Random();

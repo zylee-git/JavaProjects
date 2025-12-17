@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JigsawGame:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JigsawGame_jar</output-path>
+    <root id="archive" name="JigsawGame.jar">
+      <element id="module-output" name="JigsawGame" />
+    </root>
+  </artifact>
+</component>
